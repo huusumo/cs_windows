@@ -1,0 +1,40 @@
+C:\Users\lyngo\Documents\Visual Studio 2017\Windows\GameCaro\GameCaro\bin\Debug\GameCaro.exe.config
+C:\Users\lyngo\Documents\Visual Studio 2017\Windows\GameCaro\GameCaro\bin\Debug\GameCaro.exe
+C:\Users\lyngo\Documents\Visual Studio 2017\Windows\GameCaro\GameCaro\bin\Debug\GameCaro.pdb
+C:\Users\lyngo\Documents\Visual Studio 2017\Windows\GameCaro\GameCaro\obj\Debug\GameCaro.Form1.resources
+C:\Users\lyngo\Documents\Visual Studio 2017\Windows\GameCaro\GameCaro\obj\Debug\GameCaro.Properties.Resources.resources
+C:\Users\lyngo\Documents\Visual Studio 2017\Windows\GameCaro\GameCaro\obj\Debug\GameCaro.csproj.GenerateResource.cache
+C:\Users\lyngo\Documents\Visual Studio 2017\Windows\GameCaro\GameCaro\obj\Debug\GameCaro.csproj.CoreCompileInputs.cache
+C:\Users\lyngo\Documents\Visual Studio 2017\Windows\GameCaro\GameCaro\obj\Debug\GameCaro.exe
+C:\Users\lyngo\Documents\Visual Studio 2017\Windows\GameCaro\GameCaro\obj\Debug\GameCaro.pdb
+C:\Users\lyngo\Documents\Visual Studio 2017\Windows\GameCaro\GameCaro\obj\Debug\GameCaro.csprojAssemblyReference.cache
+C:\Users\lyngo\Documents\Visual Studio 2017\C#\Windows\GameCaro\GameCaro\bin\Debug\GameCaro.exe.config
+C:\Users\lyngo\Documents\Visual Studio 2017\C#\Windows\GameCaro\GameCaro\bin\Debug\GameCaro.exe
+C:\Users\lyngo\Documents\Visual Studio 2017\C#\Windows\GameCaro\GameCaro\bin\Debug\GameCaro.pdb
+C:\Users\lyngo\Documents\Visual Studio 2017\C#\Windows\GameCaro\GameCaro\obj\Debug\GameCaro.csprojAssemblyReference.cache
+C:\Users\lyngo\Documents\Visual Studio 2017\C#\Windows\GameCaro\GameCaro\obj\Debug\GameCaro.Form1.resources
+C:\Users\lyngo\Documents\Visual Studio 2017\C#\Windows\GameCaro\GameCaro\obj\Debug\GameCaro.Properties.Resources.resources
+C:\Users\lyngo\Documents\Visual Studio 2017\C#\Windows\GameCaro\GameCaro\obj\Debug\GameCaro.csproj.GenerateResource.cache
+C:\Users\lyngo\Documents\Visual Studio 2017\C#\Windows\GameCaro\GameCaro\obj\Debug\GameCaro.csproj.CoreCompileInputs.cache
+C:\Users\lyngo\Documents\Visual Studio 2017\C#\Windows\GameCaro\GameCaro\obj\Debug\GameCaro.exe
+C:\Users\lyngo\Documents\Visual Studio 2017\C#\Windows\GameCaro\GameCaro\obj\Debug\GameCaro.pdb
+D:\LyNgocHuu\cs_windows\GameCaro\GameCaro\bin\Debug\GameCaro.exe.config
+D:\LyNgocHuu\cs_windows\GameCaro\GameCaro\bin\Debug\GameCaro.exe
+D:\LyNgocHuu\cs_windows\GameCaro\GameCaro\bin\Debug\GameCaro.pdb
+D:\LyNgocHuu\cs_windows\GameCaro\GameCaro\obj\Debug\GameCaro.csprojAssemblyReference.cache
+D:\LyNgocHuu\cs_windows\GameCaro\GameCaro\obj\Debug\GameCaro.Form1.resources
+D:\LyNgocHuu\cs_windows\GameCaro\GameCaro\obj\Debug\GameCaro.Properties.Resources.resources
+D:\LyNgocHuu\cs_windows\GameCaro\GameCaro\obj\Debug\GameCaro.csproj.GenerateResource.cache
+D:\LyNgocHuu\cs_windows\GameCaro\GameCaro\obj\Debug\GameCaro.csproj.CoreCompileInputs.cache
+D:\LyNgocHuu\cs_windows\GameCaro\GameCaro\obj\Debug\GameCaro.exe
+D:\LyNgocHuu\cs_windows\GameCaro\GameCaro\obj\Debug\GameCaro.pdb
+D:\LyNgocHuu\backup\GameCaro\GameCaro\bin\Debug\GameCaro.exe.config
+D:\LyNgocHuu\backup\GameCaro\GameCaro\bin\Debug\GameCaro.exe
+D:\LyNgocHuu\backup\GameCaro\GameCaro\bin\Debug\GameCaro.pdb
+D:\LyNgocHuu\backup\GameCaro\GameCaro\obj\Debug\GameCaro.csprojAssemblyReference.cache
+D:\LyNgocHuu\backup\GameCaro\GameCaro\obj\Debug\GameCaro.Form1.resources
+D:\LyNgocHuu\backup\GameCaro\GameCaro\obj\Debug\GameCaro.Properties.Resources.resources
+D:\LyNgocHuu\backup\GameCaro\GameCaro\obj\Debug\GameCaro.csproj.GenerateResource.cache
+D:\LyNgocHuu\backup\GameCaro\GameCaro\obj\Debug\GameCaro.csproj.CoreCompileInputs.cache
+D:\LyNgocHuu\backup\GameCaro\GameCaro\obj\Debug\GameCaro.exe
+D:\LyNgocHuu\backup\GameCaro\GameCaro\obj\Debug\GameCaro.pdb

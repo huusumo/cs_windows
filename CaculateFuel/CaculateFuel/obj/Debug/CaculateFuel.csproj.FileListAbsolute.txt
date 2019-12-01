@@ -1,0 +1,7 @@
+C:\Users\lyngo\Documents\Visual Studio 2017\C#\Windows\CaculateFuel\CaculateFuel\bin\Debug\CaculateFuel.exe.config
+C:\Users\lyngo\Documents\Visual Studio 2017\C#\Windows\CaculateFuel\CaculateFuel\bin\Debug\CaculateFuel.exe
+C:\Users\lyngo\Documents\Visual Studio 2017\C#\Windows\CaculateFuel\CaculateFuel\bin\Debug\CaculateFuel.pdb
+C:\Users\lyngo\Documents\Visual Studio 2017\C#\Windows\CaculateFuel\CaculateFuel\obj\Debug\CaculateFuel.csprojAssemblyReference.cache
+C:\Users\lyngo\Documents\Visual Studio 2017\C#\Windows\CaculateFuel\CaculateFuel\obj\Debug\CaculateFuel.csproj.CoreCompileInputs.cache
+C:\Users\lyngo\Documents\Visual Studio 2017\C#\Windows\CaculateFuel\CaculateFuel\obj\Debug\CaculateFuel.exe
+C:\Users\lyngo\Documents\Visual Studio 2017\C#\Windows\CaculateFuel\CaculateFuel\obj\Debug\CaculateFuel.pdb

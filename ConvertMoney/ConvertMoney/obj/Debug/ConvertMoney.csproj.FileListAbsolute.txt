@@ -1,0 +1,7 @@
+C:\Users\lyngo\Documents\Visual Studio 2017\C#\Windows\ConvertMoney\ConvertMoney\bin\Debug\ConvertMoney.exe.config
+C:\Users\lyngo\Documents\Visual Studio 2017\C#\Windows\ConvertMoney\ConvertMoney\bin\Debug\ConvertMoney.exe
+C:\Users\lyngo\Documents\Visual Studio 2017\C#\Windows\ConvertMoney\ConvertMoney\bin\Debug\ConvertMoney.pdb
+C:\Users\lyngo\Documents\Visual Studio 2017\C#\Windows\ConvertMoney\ConvertMoney\obj\Debug\ConvertMoney.csprojAssemblyReference.cache
+C:\Users\lyngo\Documents\Visual Studio 2017\C#\Windows\ConvertMoney\ConvertMoney\obj\Debug\ConvertMoney.csproj.CoreCompileInputs.cache
+C:\Users\lyngo\Documents\Visual Studio 2017\C#\Windows\ConvertMoney\ConvertMoney\obj\Debug\ConvertMoney.exe
+C:\Users\lyngo\Documents\Visual Studio 2017\C#\Windows\ConvertMoney\ConvertMoney\obj\Debug\ConvertMoney.pdb
