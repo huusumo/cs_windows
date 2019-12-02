@@ -18,3 +18,4 @@ D:\LyNgocHuu\backup\QLSV\QLSV\obj\Debug\QLSV.csproj.GenerateResource.cache
 D:\LyNgocHuu\backup\QLSV\QLSV\obj\Debug\QLSV.csproj.CoreCompileInputs.cache
 D:\LyNgocHuu\backup\QLSV\QLSV\obj\Debug\QLSV.exe
 D:\LyNgocHuu\backup\QLSV\QLSV\obj\Debug\QLSV.pdb
+D:\LyNgocHuu\cs_windows\QLSV\QLSV\obj\Debug\QLSV.frmLogin.resources

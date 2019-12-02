@@ -16,6 +16,17 @@ namespace QLSV
             DAL = new DataAccessLayer();
         }
 
+        #region FormLogin
+
+        public bool CheckTK(TaiKhoan tk)
+        {
+            return DAL.CheckTK(tk);
+        }
+
+        #endregion
+
+        #region FormQLSV
+
         public DataTable GetAllSV()
         {
             return DAL.GetAllSV();
@@ -45,5 +56,7 @@ namespace QLSV
         {
             return DAL.XoaAllSV();
         }
+
+        #endregion
     }
 }

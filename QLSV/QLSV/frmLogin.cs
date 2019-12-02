@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LoginForm
+namespace QLSV
 {
     public partial class frmLogin : Form
     {
@@ -48,12 +48,27 @@ namespace LoginForm
 
                 if (BLL.CheckTK(tk))
                 {
+                    this.Hide();
+
                     frmQLSV QLSV = new frmQLSV();
                     QLSV.Show();
                 }
                 else
                     lblSai.Visible = true;
             }
+        }
+
+        private void chbxSMK_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbxSMK.Checked)
+                tbxMK.UseSystemPasswordChar = false;
+            else
+                tbxMK.UseSystemPasswordChar = true;
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

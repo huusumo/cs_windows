@@ -10,6 +10,36 @@ namespace QLSV
 {
     class DataAccessLayer
     {
+        #region FormLogin
+
+        public bool CheckTK(TaiKhoan tk)
+        {
+            string sql = "select * from TaiKhoan where Taikhoan like @Taikhoan and Matkhau like @Matkhau";
+            using (SqlConnection connection = new SqlConnection(DataConnection.ConnectDatabase))
+            {
+                connection.Open();
+
+                SqlCommand cmd = new SqlCommand(sql, connection);
+                cmd.Parameters.Add("@Taikhoan", SqlDbType.Char).Value = tk.Taikhoan;
+                cmd.Parameters.Add("@Matkhau", SqlDbType.Char).Value = tk.Matkhau;
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                bool ret;
+                if (reader.Read() == true)
+                    ret = true;
+                else
+                    ret = false;
+
+                connection.Close();
+
+                return ret;
+            }
+        }
+
+        #endregion
+
+        #region FormQLSV
+
         public DataTable GetAllSV()
         {
             DataTable datable = new DataTable();
@@ -138,5 +168,7 @@ namespace QLSV
                 return true;
             }
         }
+
+        #endregion
     }
 }
