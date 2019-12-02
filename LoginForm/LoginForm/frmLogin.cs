@@ -46,10 +46,13 @@ namespace LoginForm
                 tk.Taikhoan = tbxTK.Text;
                 tk.Matkhau = tbxMK.Text;
 
-                if(BLL.CheckTK(tk))
-                    MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK);
+                if (BLL.CheckTK(tk))
+                {
+                    frmQLSV QLSV = new frmQLSV();
+                    QLSV.Show();
+                }
                 else
-                    MessageBox.Show("Đăng nhập thất bại!", "Thông báo", MessageBoxButtons.OK);
+                    lblSai.Visible = true;
             }
         }
     }

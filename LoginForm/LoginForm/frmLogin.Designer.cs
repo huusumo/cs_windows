@@ -30,7 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblSai = new System.Windows.Forms.Label();
             this.tbxTK = new System.Windows.Forms.TextBox();
             this.tbxMK = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
@@ -55,16 +55,16 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Mật khẩu:";
             // 
-            // label3
+            // lblSai
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(65, 115);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(210, 16);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Sai tài khoản hoặc mật khẩu !";
-            this.label3.Visible = false;
+            this.lblSai.AutoSize = true;
+            this.lblSai.ForeColor = System.Drawing.Color.Red;
+            this.lblSai.Location = new System.Drawing.Point(65, 115);
+            this.lblSai.Name = "lblSai";
+            this.lblSai.Size = new System.Drawing.Size(210, 16);
+            this.lblSai.TabIndex = 2;
+            this.lblSai.Text = "Sai tài khoản hoặc mật khẩu !";
+            this.lblSai.Visible = false;
             // 
             // tbxTK
             // 
@@ -108,11 +108,11 @@
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.tbxMK);
             this.Controls.Add(this.tbxTK);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblSai);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FORM ĐĂNG NHẬP";
@@ -125,7 +125,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblSai;
         private System.Windows.Forms.TextBox tbxTK;
         private System.Windows.Forms.TextBox tbxMK;
         private System.Windows.Forms.Button btnLogin;

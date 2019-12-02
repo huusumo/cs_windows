@@ -11,6 +11,8 @@ namespace LoginForm
 {
     class DataAccessLayer
     {
+        #region FormLogin
+
         public bool CheckTK(TaiKhoan tk)
         {
             string sql = "select * from TaiKhoan where Taikhoan like @Taikhoan and Matkhau like @Matkhau";
@@ -41,5 +43,28 @@ namespace LoginForm
                 }
             }
         }
+
+        #endregion
+
+        #region FormQLSV
+
+        public DataTable GetAllSV()
+        {
+            DataTable datable = new DataTable();
+
+            string sql = "select * from SinhVien";
+            using (SqlConnection connection = new SqlConnection(DataConnection.ConnectDatabase))
+            {
+                connection.Open();
+
+                SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
+                adapter.Fill(datable);
+
+                connection.Close();
+            }
+            return datable;
+        }
+
+        #endregion
     }
 }
