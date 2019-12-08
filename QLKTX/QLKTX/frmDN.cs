@@ -47,7 +47,11 @@ namespace QLKTX
                 tk.Matkhau = tbxMK.Text;
 
                 if (BLL.CheckTK(tk))
-                    MessageBox.Show("success!", "Thông báo", MessageBoxButtons.OK);
+                {
+                    this.Hide();
+                    frmQLKTX QLKTX = new frmQLKTX();
+                    QLKTX.Show();
+                }
                 else
                     lblSai.Visible = true;
             }
@@ -56,6 +60,14 @@ namespace QLKTX
         private void btnThoat_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void chbxMK_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbxMK.Checked)
+                tbxMK.UseSystemPasswordChar = false;
+            else
+                tbxMK.UseSystemPasswordChar = true;
         }
     }
 }

@@ -89,6 +89,7 @@
             this.tbxMK.Name = "tbxMK";
             this.tbxMK.Size = new System.Drawing.Size(189, 22);
             this.tbxMK.TabIndex = 5;
+            this.tbxMK.UseSystemPasswordChar = true;
             // 
             // chbxMK
             // 
@@ -99,6 +100,7 @@
             this.chbxMK.TabIndex = 6;
             this.chbxMK.Text = "Hiển thị mật khẩu";
             this.chbxMK.UseVisualStyleBackColor = true;
+            this.chbxMK.CheckedChanged += new System.EventHandler(this.chbxMK_CheckedChanged);
             // 
             // lblSai
             // 
