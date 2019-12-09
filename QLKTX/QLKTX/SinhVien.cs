@@ -10,6 +10,7 @@ namespace QLKTX
     {
         public string MaSV;
         public string HoTenSV;
+        public string MaPhong;
         public DateTime NgaySinh;
         public bool GioiTinh;
         public string TrangThai;

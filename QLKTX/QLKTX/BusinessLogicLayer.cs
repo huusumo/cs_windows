@@ -91,6 +91,12 @@ namespace QLKTX
             return DAL.XoaAllPhong();
         }
 
+        //
+        public DataTable GetAllMaKN()
+        {
+            return DAL.GetAllMaKN();
+        }
+
         #endregion
 
         #region FormQLSV
@@ -123,6 +129,12 @@ namespace QLKTX
         public bool XoaAllSV()
         {
             return DAL.XoaAllSV();
+        }
+
+        //
+        public DataTable GetAllMaPhong()
+        {
+            return DAL.GetAllMaPhong();
         }
 
         #endregion       

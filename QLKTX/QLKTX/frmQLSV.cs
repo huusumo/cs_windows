@@ -19,6 +19,10 @@ namespace QLKTX
             InitializeComponent();
 
             BLL = new BusinessLogicLayer();
+
+            DataTable datable = BLL.GetAllMaPhong();
+            for (int i = 0; i < datable.Rows.Count; i++)
+                cbxMaP.Items.Add(datable.Rows[i].ItemArray[0]);
         }
 
         void ShowAllSV()
@@ -41,8 +45,9 @@ namespace QLKTX
 
                 tbxMaSV.Text = dgvSV.Rows[index].Cells[0].Value.ToString();
                 tbxHoTenSV.Text = dgvSV.Rows[index].Cells[1].Value.ToString();
-                dtpNgaySinh.Text = dgvSV.Rows[index].Cells[2].Value.ToString();
-                if (dgvSV.Rows[index].Cells[3].Value.ToString() == "True")
+                cbxMaP.Text= dgvSV.Rows[index].Cells[2].Value.ToString();
+                dtpNgaySinh.Text = dgvSV.Rows[index].Cells[3].Value.ToString();
+                if (dgvSV.Rows[index].Cells[4].Value.ToString() == "True")
                 {
                     chbxNam.Checked = true;
                     chbxNu.Checked = false;
@@ -52,14 +57,14 @@ namespace QLKTX
                     chbxNam.Checked = false;
                     chbxNu.Checked = true;
                 }
-                tbxTrangThai.Text = dgvSV.Rows[index].Cells[4].Value.ToString();
-                cbxMienGiam.Text = dgvSV.Rows[index].Cells[5].Value.ToString();
-                dtpNgayVao.Text = dgvSV.Rows[index].Cells[6].Value.ToString();
-                if (dgvSV.Rows[index].Cells[7].Value.ToString() == "True")
+                tbxTrangThai.Text = dgvSV.Rows[index].Cells[5].Value.ToString();
+                cbxMienGiam.Text = dgvSV.Rows[index].Cells[6].Value.ToString();
+                dtpNgayVao.Text = dgvSV.Rows[index].Cells[7].Value.ToString();
+                if (dgvSV.Rows[index].Cells[8].Value.ToString() == "True")
                     chbxDadongtien.Checked = true;
                 else
                     chbxDadongtien.Checked = false;
-                tbxChucVu.Text = dgvSV.Rows[index].Cells[8].Value.ToString();
+                tbxChucVu.Text = dgvSV.Rows[index].Cells[9].Value.ToString();
             }
             catch { }
         }
@@ -68,6 +73,7 @@ namespace QLKTX
         {
             tbxMaSV.Clear();
             tbxHoTenSV.Clear();
+            cbxMaP.Text = "";
             dtpNgaySinh.Text = "";
             chbxNam.Checked = false;
             chbxNu.Checked = false;
@@ -103,6 +109,7 @@ namespace QLKTX
                 SinhVien sv = new SinhVien();
                 sv.MaSV = tbxMaSV.Text;
                 sv.HoTenSV = tbxHoTenSV.Text;
+                sv.MaPhong = cbxMaP.Text;
                 sv.NgaySinh = dtpNgaySinh.Value;
                 sv.GioiTinh = chbxNam.Checked;
                 sv.TrangThai = tbxTrangThai.Text;
@@ -125,6 +132,7 @@ namespace QLKTX
                 SinhVien sv = new SinhVien();
                 sv.MaSV = tbxMaSV.Text;
                 sv.HoTenSV = tbxHoTenSV.Text;
+                sv.MaPhong = cbxMaP.Text;
                 sv.NgaySinh = dtpNgaySinh.Value;
                 sv.GioiTinh = chbxNam.Checked;
                 sv.TrangThai = tbxTrangThai.Text;
@@ -169,6 +177,40 @@ namespace QLKTX
                 ShowAllSV();
             else
                 MessageBox.Show("Đã xảy ra lỗi!", "Thông báo", MessageBoxButtons.OK);
+        }
+
+        private void btnXuat_Click(object sender, EventArgs e)
+        {
+            if (CheckData())
+            {
+                Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
+
+                Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
+
+                Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
+                worksheet = workbook.Sheets["Sheet1"];
+                worksheet = workbook.ActiveSheet;
+                app.Visible = true;
+
+                worksheet.Cells[1, 1] = "THÔNG TIN SINH VIÊN";
+
+                worksheet.Cells[3, 2] = "Mã sinh viên: " + tbxMaSV.Text;
+                worksheet.Cells[4, 2] = "Họ tên: " + tbxHoTenSV.Text;
+                worksheet.Cells[5, 2] = "Mã phòng: " + cbxMaP.Text;
+                worksheet.Cells[6, 2] = "Ngày sinh: " + dtpNgaySinh.Text;
+                if (chbxNam.Checked)
+                    worksheet.Cells[7, 2] = "Giới tính: Nam";
+                else
+                    worksheet.Cells[7, 2] = "Giới tính: Nữ";
+                worksheet.Cells[8, 2] = "Trạng thái: " + tbxTrangThai.Text;
+                worksheet.Cells[9, 2] = "Miễn giảm: " + cbxMienGiam.Text;
+                worksheet.Cells[10, 2] = "Ngày vào: " + dtpNgayVao.Text;
+                if (chbxDadongtien.Checked)
+                    worksheet.Cells[11, 2] = "Đã đóng tiền";
+                else
+                    worksheet.Cells[11, 2] = "Chưa đóng tiền";
+                worksheet.Cells[12, 2] = "Chức vụ: " + tbxChucVu.Text;
+            }
         }
     }
 }

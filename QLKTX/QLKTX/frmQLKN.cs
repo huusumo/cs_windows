@@ -84,12 +84,17 @@ namespace QLKTX
             if (CheckData())
             {
                 KhuNha kn = new KhuNha();
-                kn.MaKN = tbxMaKN.Text;
-                kn.SoTang = int.Parse(tbxSoTang.Text);
-                kn.SoPhong = int.Parse(tbxSoPhong.Text);
+                kn.MaKN = tbxMaKN.Text;               
                 kn.ViTri = tbxViTri.Text;
                 kn.TinhXay = tbxTinhXay.Text;
                 kn.TruongKN = tbxTruongKhuNha.Text;
+                try
+                {
+                    kn.SoTang = int.Parse(tbxSoTang.Text);
+                    kn.SoPhong = int.Parse(tbxSoPhong.Text);
+                    kn.TienDienNuoc = double.Parse(tbxTienDienNuoc.Text);
+                }
+                catch { }
 
                 if (BLL.ThemKN(kn))
                     ShowAllKN();
@@ -146,6 +151,31 @@ namespace QLKTX
             DataTable datable = BLL.TimKN(key);
             dgvKN.DataSource = datable;
             dgvKN.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
+
+        private void btnXuat_Click(object sender, EventArgs e)
+        {
+            if (CheckData())
+            {
+                Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
+
+                Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
+
+                Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
+                worksheet = workbook.Sheets["Sheet1"];
+                worksheet = workbook.ActiveSheet;
+                app.Visible = true;
+
+                worksheet.Cells[1, 1] = "THÔNG TIN KHU NHÀ";
+
+                worksheet.Cells[3, 2] = "Mã khu nhà: " + tbxMaKN.Text;
+                worksheet.Cells[4, 2] = "Số tầng: " + tbxSoTang.Text;
+                worksheet.Cells[5, 2] = "Số phòng: " + tbxSoPhong.Text;
+                worksheet.Cells[6, 2] = "Vị trí: " + tbxViTri.Text;
+                worksheet.Cells[7, 2] = "Tỉnh xây: " + tbxTinhXay.Text;
+                worksheet.Cells[8, 2] = "Trưởng khu nhà: " + tbxTruongKhuNha.Text;
+                worksheet.Cells[9, 2] = "Tiền điện nước: " + tbxTienDienNuoc.Text;
+            }
         }
     }
 }

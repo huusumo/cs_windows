@@ -19,6 +19,10 @@ namespace QLKTX
             InitializeComponent();
 
             BLL = new BusinessLogicLayer();
+
+            DataTable adapter = BLL.GetAllMaKN();
+            for (int i = 0; i < adapter.Rows.Count; i++)
+                cbxMaKN.Items.Add(adapter.Rows[i].ItemArray[0]);
         }
 
         void ShowAllPhong()
@@ -68,7 +72,11 @@ namespace QLKTX
                 phg.MaPhong = tbxMaPhong.Text;
                 phg.MaKN = cbxMaKN.Text;
                 phg.TruongPhong = cbxTruongPhong.Text;
-                phg.TienDienNuoc = double.Parse(tbxTienDienNuoc.Text);
+                try
+                {
+                    phg.TienDienNuoc = double.Parse(tbxTienDienNuoc.Text);
+                }
+                catch { }
                 phg.ChiTiet = tbxChiTiet.Text;
 
                 if (BLL.ThemPhong(phg))
@@ -136,6 +144,29 @@ namespace QLKTX
             DataTable datable = BLL.TimPhong(key);
             dgvP.DataSource = datable;
             dgvP.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
+
+        private void btnXuat_Click(object sender, EventArgs e)
+        {
+            if (CheckData())
+            {
+                Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
+
+                Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
+
+                Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
+                worksheet = workbook.Sheets["Sheet1"];
+                worksheet = workbook.ActiveSheet;
+                app.Visible = true;
+
+                worksheet.Cells[1, 1] = "THÔNG TIN PHÒNG";
+
+                worksheet.Cells[3, 2] = "Mã phòng: " + tbxMaPhong.Text;
+                worksheet.Cells[4, 2] = "Mã khu nhà: " + cbxMaKN.Text;
+                worksheet.Cells[5, 2] = "Trưởng phòng: " + cbxTruongPhong.Text;
+                worksheet.Cells[6, 2] = "Tiền điện nước: " + tbxTienDienNuoc.Text;
+                worksheet.Cells[7, 2] = "Chi tiết: " + tbxChiTiet.Text;
+            }
         }
     }
 }

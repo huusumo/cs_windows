@@ -51,6 +51,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tbxTienDienNuoc = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.btnXuat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKN)).BeginInit();
             this.SuspendLayout();
             // 
@@ -252,11 +253,22 @@
             this.label8.TabIndex = 21;
             this.label8.Text = "Tiền điện nước:";
             // 
+            // btnXuat
+            // 
+            this.btnXuat.Location = new System.Drawing.Point(482, 428);
+            this.btnXuat.Name = "btnXuat";
+            this.btnXuat.Size = new System.Drawing.Size(96, 40);
+            this.btnXuat.TabIndex = 23;
+            this.btnXuat.Text = "Xuất Excel";
+            this.btnXuat.UseVisualStyleBackColor = true;
+            this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
+            // 
             // frmQLKN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(606, 436);
+            this.ClientSize = new System.Drawing.Size(606, 480);
+            this.Controls.Add(this.btnXuat);
             this.Controls.Add(this.tbxTienDienNuoc);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -317,5 +329,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox tbxTienDienNuoc;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnXuat;
     }
 }

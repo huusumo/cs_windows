@@ -41,6 +41,7 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.tbxTimSV = new System.Windows.Forms.TextBox();
             this.btnXoaAll = new System.Windows.Forms.Button();
+            this.btnExcel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,7 +88,7 @@
             // dgvSV
             // 
             this.dgvSV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSV.Location = new System.Drawing.Point(28, 165);
+            this.dgvSV.Location = new System.Drawing.Point(28, 245);
             this.dgvSV.Name = "dgvSV";
             this.dgvSV.Size = new System.Drawing.Size(571, 209);
             this.dgvSV.TabIndex = 4;
@@ -162,11 +163,22 @@
             this.btnXoaAll.UseVisualStyleBackColor = true;
             this.btnXoaAll.Click += new System.EventHandler(this.btnXoaAll_Click);
             // 
+            // btnExcel
+            // 
+            this.btnExcel.Location = new System.Drawing.Point(247, 183);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(107, 23);
+            this.btnExcel.TabIndex = 13;
+            this.btnExcel.Text = "E";
+            this.btnExcel.UseVisualStyleBackColor = true;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
+            // 
             // frmQLSV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(626, 386);
+            this.ClientSize = new System.Drawing.Size(626, 506);
+            this.Controls.Add(this.btnExcel);
             this.Controls.Add(this.btnXoaAll);
             this.Controls.Add(this.tbxTimSV);
             this.Controls.Add(this.btnXoa);
@@ -207,6 +219,7 @@
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.TextBox tbxTimSV;
         private System.Windows.Forms.Button btnXoaAll;
+        private System.Windows.Forms.Button btnExcel;
     }
 }
 

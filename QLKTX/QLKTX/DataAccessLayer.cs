@@ -55,7 +55,7 @@ namespace QLKTX
 
         public bool ThemKN(KhuNha kn)
         {
-            string sql = "insert into KhuNha values(@MaKN, @SoTang, @SoPhong, @ViTri, @TinhXay, @TruongKN)";
+            string sql = "insert into KhuNha values(@MaKN, @SoTang, @SoPhong, @ViTri, @TinhXay, @TruongKN, @TienDienNuoc)";
             using (SqlConnection connection = new SqlConnection(DataConnection.ConnectDatabase))
             {
                 try
@@ -69,6 +69,7 @@ namespace QLKTX
                     cmd.Parameters.Add("@ViTri", SqlDbType.NVarChar).Value = kn.ViTri;
                     cmd.Parameters.Add("@TinhXay", SqlDbType.NVarChar).Value = kn.TinhXay;
                     cmd.Parameters.Add("@TruongKN", SqlDbType.NVarChar).Value = kn.TruongKN;
+                    cmd.Parameters.Add("@TienDienNuoc", SqlDbType.Float).Value = kn.TienDienNuoc;
                     cmd.ExecuteNonQuery();
 
                     connection.Close();
@@ -308,6 +309,24 @@ namespace QLKTX
             }
         }
 
+        //
+        public DataTable GetAllMaKN()
+        {
+            DataTable datable = new DataTable();
+
+            string sql = "select MaKN from KhuNha";
+            using (SqlConnection connection = new SqlConnection(DataConnection.ConnectDatabase))
+            {
+                connection.Open();
+
+                SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
+                adapter.Fill(datable);
+
+                connection.Close();
+            }
+            return datable;
+        }
+
         #endregion
 
         #region FormQLSV
@@ -331,7 +350,7 @@ namespace QLKTX
 
         public bool ThemSV(SinhVien sv)
         {
-            string sql = "insert into SinhVien values(@MaSV, @HoTenSV, @NgaySinh, @GioiTinh, @TrangThai, @MienGiam, @NgayVao, @DongTien, @ChucVu)";
+            string sql = "insert into SinhVien values(@MaSV, @HoTenSV, @MaP, @NgaySinh, @GioiTinh, @TrangThai, @MienGiam, @NgayVao, @DongTien, @ChucVu)";
             using (SqlConnection connection = new SqlConnection(DataConnection.ConnectDatabase))
             {
                 try
@@ -339,8 +358,9 @@ namespace QLKTX
                     connection.Open();
 
                     SqlCommand cmd = new SqlCommand(sql, connection);
-                    cmd.Parameters.Add("@MaSV", SqlDbType.Char).Value = sv.MaSV;
+                    cmd.Parameters.Add("@MaSV", SqlDbType.NChar).Value = sv.MaSV;
                     cmd.Parameters.Add("@HoTenSV", SqlDbType.NVarChar).Value = sv.HoTenSV;
+                    cmd.Parameters.Add("@MaP", SqlDbType.NChar).Value = sv.MaPhong;
                     cmd.Parameters.Add("@Ngaysinh", SqlDbType.Date).Value = sv.NgaySinh;
                     cmd.Parameters.Add("@GioiTinh", SqlDbType.Bit).Value = sv.GioiTinh;
                     cmd.Parameters.Add("@TrangThai", SqlDbType.NVarChar).Value = sv.TrangThai;
@@ -362,7 +382,7 @@ namespace QLKTX
 
         public bool SuaSV(SinhVien sv)
         {
-            string sql = "update SinhVien set HoTenSV=@HoTenSV, NgaySinh=@NgaySinh, GioiTinh=@GioiTinh, TrangThai=@TrangThai, MienGiam=@MienGiam, NgayVao=@NgayVao, DongTien=@DongTien, ChucVu=@ChucVu where MaSV=@MaSV";
+            string sql = "update SinhVien set HoTenSV=@HoTenSV, MaPhong=@MaPhong, NgaySinh=@NgaySinh, GioiTinh=@GioiTinh, TrangThai=@TrangThai, MienGiam=@MienGiam, NgayVao=@NgayVao, DongTien=@DongTien, ChucVu=@ChucVu where MaSV=@MaSV";
             using (SqlConnection connection = new SqlConnection(DataConnection.ConnectDatabase))
             {
                 try
@@ -372,6 +392,7 @@ namespace QLKTX
                     SqlCommand cmd = new SqlCommand(sql, connection);
                     cmd.Parameters.Add("@MaSV", SqlDbType.Char).Value = sv.MaSV;
                     cmd.Parameters.Add("@HoTenSV", SqlDbType.NVarChar).Value = sv.HoTenSV;
+                    cmd.Parameters.Add("@MaPhong", SqlDbType.NChar).Value = sv.MaPhong;
                     cmd.Parameters.Add("@Ngaysinh", SqlDbType.Date).Value = sv.NgaySinh;
                     cmd.Parameters.Add("@GioiTinh", SqlDbType.Bit).Value = sv.GioiTinh;
                     cmd.Parameters.Add("@TrangThai", SqlDbType.NVarChar).Value = sv.TrangThai;
@@ -451,6 +472,24 @@ namespace QLKTX
                 }
                 return true;
             }
+        }
+
+        //
+        public DataTable GetAllMaPhong()
+        {
+            DataTable datable = new DataTable();
+
+            string sql = "select MaPhong from Phong";
+            using (SqlConnection connection = new SqlConnection(DataConnection.ConnectDatabase))
+            {
+                connection.Open();
+
+                SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
+                adapter.Fill(datable);
+
+                connection.Close();
+            }
+            return datable;
         }
 
         #endregion      

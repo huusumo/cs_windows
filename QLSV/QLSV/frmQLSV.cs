@@ -127,5 +127,17 @@ namespace QLSV
             else
                 MessageBox.Show("Đã xảy ra lỗi!", "Thông báo", MessageBoxButtons.OK);
         }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
+            Microsoft.Office.Interop.Excel._Workbook wb = app.Workbooks.Add(Type.Missing);
+            Microsoft.Office.Interop.Excel._Worksheet ws = null;
+            ws = wb.Sheets["Sheet1"];
+            ws = wb.ActiveSheet;
+            app.Visible = true;
+
+            ws.Cells[1, 1] = "huu dep trai";
+        }
     }
 }

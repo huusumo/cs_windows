@@ -25,13 +25,17 @@ namespace QLKTX
         {
             if (string.IsNullOrEmpty(tbxTK.Text))
             {
-                MessageBox.Show("Chưa nhập tài khoản!", "Thông báo", MessageBoxButtons.OK);
+                lblTK.Visible = true;
+                lblMK.Visible = false;
+                lblSai.Visible = false;
                 tbxTK.Focus();
                 return false;
             }
             if (string.IsNullOrEmpty(tbxMK.Text))
             {
-                MessageBox.Show("Chưa nhập mật khẩu!", "Thông báo", MessageBoxButtons.OK);
+                lblTK.Visible = false;
+                lblMK.Visible = true;
+                lblSai.Visible = false;
                 tbxMK.Focus();
                 return false;
             }
@@ -53,7 +57,11 @@ namespace QLKTX
                     QLKTX.Show();
                 }
                 else
+                {
+                    lblTK.Visible = false;
+                    lblMK.Visible = false;
                     lblSai.Visible = true;
+                }
             }
         }
 

@@ -47,6 +47,7 @@
             this.btnXoaAll = new System.Windows.Forms.Button();
             this.tbxTim = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnXuat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvP)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,7 +75,7 @@
             this.cbxMaKN.Location = new System.Drawing.Point(145, 40);
             this.cbxMaKN.Name = "cbxMaKN";
             this.cbxMaKN.Size = new System.Drawing.Size(121, 24);
-            this.cbxMaKN.TabIndex = 2;
+            this.cbxMaKN.TabIndex = 1;
             // 
             // label4
             // 
@@ -108,7 +109,7 @@
             this.tbxMaPhong.Location = new System.Drawing.Point(145, 10);
             this.tbxMaPhong.Name = "tbxMaPhong";
             this.tbxMaPhong.Size = new System.Drawing.Size(121, 22);
-            this.tbxMaPhong.TabIndex = 7;
+            this.tbxMaPhong.TabIndex = 0;
             // 
             // cbxTruongPhong
             // 
@@ -116,14 +117,14 @@
             this.cbxTruongPhong.Location = new System.Drawing.Point(145, 71);
             this.cbxTruongPhong.Name = "cbxTruongPhong";
             this.cbxTruongPhong.Size = new System.Drawing.Size(121, 24);
-            this.cbxTruongPhong.TabIndex = 8;
+            this.cbxTruongPhong.TabIndex = 2;
             // 
             // tbxTienDienNuoc
             // 
             this.tbxTienDienNuoc.Location = new System.Drawing.Point(145, 101);
             this.tbxTienDienNuoc.Name = "tbxTienDienNuoc";
             this.tbxTienDienNuoc.Size = new System.Drawing.Size(121, 22);
-            this.tbxTienDienNuoc.TabIndex = 9;
+            this.tbxTienDienNuoc.TabIndex = 3;
             // 
             // tbxChiTiet
             // 
@@ -131,7 +132,7 @@
             this.tbxChiTiet.Multiline = true;
             this.tbxChiTiet.Name = "tbxChiTiet";
             this.tbxChiTiet.Size = new System.Drawing.Size(177, 92);
-            this.tbxChiTiet.TabIndex = 10;
+            this.tbxChiTiet.TabIndex = 4;
             // 
             // dgvP
             // 
@@ -147,7 +148,7 @@
             this.btnClear.Location = new System.Drawing.Point(351, 20);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(106, 39);
-            this.btnClear.TabIndex = 12;
+            this.btnClear.TabIndex = 6;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
@@ -157,7 +158,7 @@
             this.btnQuayLai.Location = new System.Drawing.Point(463, 20);
             this.btnQuayLai.Name = "btnQuayLai";
             this.btnQuayLai.Size = new System.Drawing.Size(106, 39);
-            this.btnQuayLai.TabIndex = 13;
+            this.btnQuayLai.TabIndex = 7;
             this.btnQuayLai.Text = "Quay lại";
             this.btnQuayLai.UseVisualStyleBackColor = true;
             this.btnQuayLai.Click += new System.EventHandler(this.btnQuayLai_Click);
@@ -167,7 +168,7 @@
             this.btnThem.Location = new System.Drawing.Point(351, 64);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(106, 39);
-            this.btnThem.TabIndex = 14;
+            this.btnThem.TabIndex = 8;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
@@ -177,7 +178,7 @@
             this.btnSua.Location = new System.Drawing.Point(463, 63);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(106, 39);
-            this.btnSua.TabIndex = 15;
+            this.btnSua.TabIndex = 9;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
@@ -187,7 +188,7 @@
             this.btnXoa.Location = new System.Drawing.Point(351, 108);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(106, 39);
-            this.btnXoa.TabIndex = 16;
+            this.btnXoa.TabIndex = 10;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
@@ -197,7 +198,7 @@
             this.btnXoaAll.Location = new System.Drawing.Point(463, 108);
             this.btnXoaAll.Name = "btnXoaAll";
             this.btnXoaAll.Size = new System.Drawing.Size(106, 39);
-            this.btnXoaAll.TabIndex = 17;
+            this.btnXoaAll.TabIndex = 11;
             this.btnXoaAll.Text = "Xóa tất cả";
             this.btnXoaAll.UseVisualStyleBackColor = true;
             this.btnXoaAll.Click += new System.EventHandler(this.btnXoaAll_Click);
@@ -207,7 +208,7 @@
             this.tbxTim.Location = new System.Drawing.Point(344, 200);
             this.tbxTim.Name = "tbxTim";
             this.tbxTim.Size = new System.Drawing.Size(238, 22);
-            this.tbxTim.TabIndex = 19;
+            this.tbxTim.TabIndex = 5;
             this.tbxTim.TextChanged += new System.EventHandler(this.tbxTim_TextChanged);
             // 
             // label3
@@ -219,11 +220,22 @@
             this.label3.TabIndex = 18;
             this.label3.Text = "Nhập mã phòng để tìm;";
             // 
+            // btnXuat
+            // 
+            this.btnXuat.Location = new System.Drawing.Point(476, 400);
+            this.btnXuat.Name = "btnXuat";
+            this.btnXuat.Size = new System.Drawing.Size(106, 39);
+            this.btnXuat.TabIndex = 19;
+            this.btnXuat.Text = "Xuất Excel";
+            this.btnXuat.UseVisualStyleBackColor = true;
+            this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
+            // 
             // frmQLP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(603, 403);
+            this.ClientSize = new System.Drawing.Size(603, 451);
+            this.Controls.Add(this.btnXuat);
             this.Controls.Add(this.tbxTim);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnXoaAll);
@@ -276,5 +288,6 @@
         private System.Windows.Forms.Button btnXoaAll;
         private System.Windows.Forms.TextBox tbxTim;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnXuat;
     }
 }
