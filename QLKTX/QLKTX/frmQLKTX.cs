@@ -30,5 +30,23 @@ namespace QLKTX
             frmDN DN = new frmDN();
             DN.Show();
         }
+
+        private void frmQLKTX_Load(object sender, EventArgs e)
+        {
+            lblTK.Text = "Tài khoản: " + this.Tag.ToString();
+        }
+
+        private void btnDoiMatKhau_Click(object sender, EventArgs e)
+        {
+            frmDoiMK DoiMK = new frmDoiMK();
+            DoiMK.Tag = this.Tag;
+            DoiMK.Show();
+        }
+
+        private void btnThemTK_Click(object sender, EventArgs e)
+        {
+            frmThemTK ThemTK = new frmThemTK();
+            ThemTK.Show();
+        }
     }
 }

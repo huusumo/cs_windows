@@ -52,6 +52,7 @@
             this.tbxTienDienNuoc = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnXuat = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKN)).BeginInit();
             this.SuspendLayout();
             // 
@@ -154,7 +155,7 @@
             // dgvKN
             // 
             this.dgvKN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKN.Location = new System.Drawing.Point(22, 251);
+            this.dgvKN.Location = new System.Drawing.Point(22, 292);
             this.dgvKN.Name = "dgvKN";
             this.dgvKN.Size = new System.Drawing.Size(556, 165);
             this.dgvKN.TabIndex = 12;
@@ -255,7 +256,7 @@
             // 
             // btnXuat
             // 
-            this.btnXuat.Location = new System.Drawing.Point(482, 428);
+            this.btnXuat.Location = new System.Drawing.Point(482, 242);
             this.btnXuat.Name = "btnXuat";
             this.btnXuat.Size = new System.Drawing.Size(96, 40);
             this.btnXuat.TabIndex = 23;
@@ -263,11 +264,21 @@
             this.btnXuat.UseVisualStyleBackColor = true;
             this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(19, 272);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(142, 16);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "Danh sách khu nhà:";
+            // 
             // frmQLKN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(606, 480);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.btnXuat);
             this.Controls.Add(this.tbxTienDienNuoc);
             this.Controls.Add(this.label8);
@@ -330,5 +341,6 @@
         private System.Windows.Forms.TextBox tbxTienDienNuoc;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnXuat;
+        private System.Windows.Forms.Label label9;
     }
 }

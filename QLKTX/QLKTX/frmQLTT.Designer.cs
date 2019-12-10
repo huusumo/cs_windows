@@ -36,7 +36,7 @@
             // 
             // btnQLKN
             // 
-            this.btnQLKN.Location = new System.Drawing.Point(14, 70);
+            this.btnQLKN.Location = new System.Drawing.Point(14, 66);
             this.btnQLKN.Name = "btnQLKN";
             this.btnQLKN.Size = new System.Drawing.Size(104, 86);
             this.btnQLKN.TabIndex = 0;
@@ -46,7 +46,7 @@
             // 
             // btnQLP
             // 
-            this.btnQLP.Location = new System.Drawing.Point(130, 70);
+            this.btnQLP.Location = new System.Drawing.Point(130, 66);
             this.btnQLP.Name = "btnQLP";
             this.btnQLP.Size = new System.Drawing.Size(104, 86);
             this.btnQLP.TabIndex = 1;
@@ -56,7 +56,7 @@
             // 
             // btnQLSV
             // 
-            this.btnQLSV.Location = new System.Drawing.Point(243, 70);
+            this.btnQLSV.Location = new System.Drawing.Point(243, 66);
             this.btnQLSV.Name = "btnQLSV";
             this.btnQLSV.Size = new System.Drawing.Size(104, 86);
             this.btnQLSV.TabIndex = 2;
@@ -78,7 +78,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(368, 206);
+            this.ClientSize = new System.Drawing.Size(368, 174);
             this.Controls.Add(this.btnQuaylai);
             this.Controls.Add(this.btnQLSV);
             this.Controls.Add(this.btnQLP);

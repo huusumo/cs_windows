@@ -25,6 +25,20 @@ namespace QLKTX
 
         #endregion
 
+        #region QLKTX
+
+        public bool DoiMK(TaiKhoan tk)
+        {
+            return DAL.DoiMK(tk);
+        }
+
+        public bool ThemTK(TaiKhoan tk)
+        {
+            return DAL.ThemTK(tk);
+        }
+
+        #endregion
+
         #region FormQLKN
 
         public DataTable GetAllKN()

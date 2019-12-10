@@ -54,7 +54,8 @@ namespace QLKTX
                 {
                     this.Hide();
                     frmQLKTX QLKTX = new frmQLKTX();
-                    QLKTX.Show();
+                    QLKTX.Tag = tbxTK.Text;
+                    QLKTX.Show();                   
                 }
                 else
                 {

@@ -59,6 +59,7 @@
             this.btnXuat = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.cbxMaP = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -189,7 +190,7 @@
             // dgvSV
             // 
             this.dgvSV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSV.Location = new System.Drawing.Point(24, 311);
+            this.dgvSV.Location = new System.Drawing.Point(24, 350);
             this.dgvSV.Name = "dgvSV";
             this.dgvSV.Size = new System.Drawing.Size(739, 173);
             this.dgvSV.TabIndex = 18;
@@ -273,7 +274,7 @@
             // 
             // tbxTimSV
             // 
-            this.tbxTimSV.Location = new System.Drawing.Point(462, 277);
+            this.tbxTimSV.Location = new System.Drawing.Point(462, 264);
             this.tbxTimSV.Name = "tbxTimSV";
             this.tbxTimSV.Size = new System.Drawing.Size(299, 22);
             this.tbxTimSV.TabIndex = 27;
@@ -282,7 +283,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(459, 249);
+            this.label10.Location = new System.Drawing.Point(459, 236);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(185, 16);
             this.label10.TabIndex = 28;
@@ -310,7 +311,7 @@
             // 
             // btnXuat
             // 
-            this.btnXuat.Location = new System.Drawing.Point(646, 493);
+            this.btnXuat.Location = new System.Drawing.Point(644, 305);
             this.btnXuat.Name = "btnXuat";
             this.btnXuat.Size = new System.Drawing.Size(117, 39);
             this.btnXuat.TabIndex = 31;
@@ -329,17 +330,28 @@
             // 
             // cbxMaP
             // 
+            this.cbxMaP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxMaP.FormattingEnabled = true;
             this.cbxMaP.Location = new System.Drawing.Point(151, 71);
             this.cbxMaP.Name = "cbxMaP";
             this.cbxMaP.Size = new System.Drawing.Size(233, 24);
             this.cbxMaP.TabIndex = 33;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(21, 331);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(150, 16);
+            this.label12.TabIndex = 34;
+            this.label12.Text = "Danh sách sinh viên:";
+            // 
             // frmQLSV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 542);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.cbxMaP);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.btnXuat);
@@ -416,5 +428,6 @@
         private System.Windows.Forms.Button btnXuat;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cbxMaP;
+        private System.Windows.Forms.Label label12;
     }
 }

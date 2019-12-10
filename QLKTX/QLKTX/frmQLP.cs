@@ -167,6 +167,6 @@ namespace QLKTX
                 worksheet.Cells[6, 2] = "Tiền điện nước: " + tbxTienDienNuoc.Text;
                 worksheet.Cells[7, 2] = "Chi tiết: " + tbxChiTiet.Text;
             }
-        }
+        }       
     }
 }

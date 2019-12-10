@@ -34,6 +34,58 @@ namespace QLKTX
 
         #endregion
 
+        #region QLKTX
+
+        public bool DoiMK(TaiKhoan tk)
+        {
+            string sql = "update TaiKhoan set Matkhau=@Matkhau where Taikhoan=@Taikhoan";
+            using (SqlConnection connection = new SqlConnection(DataConnection.ConnectDatabase))
+            {
+                try
+                {
+                    connection.Open();
+
+                    SqlCommand cmd = new SqlCommand(sql, connection);
+                    cmd.Parameters.Add("@Taikhoan", SqlDbType.Char).Value = tk.Taikhoan;
+                    cmd.Parameters.Add("@Matkhau", SqlDbType.Char).Value = tk.Matkhau;
+                    cmd.ExecuteNonQuery();
+
+                    connection.Close();
+                }
+                catch
+                {
+                    return false;
+                }
+                return true;
+            }
+        }
+
+        public bool ThemTK(TaiKhoan tk)
+        {
+            string sql = "insert into TaiKhoan values(@Taikhoan, @Matkhau)";
+            using (SqlConnection connection = new SqlConnection(DataConnection.ConnectDatabase))
+            {
+                try
+                {
+                    connection.Open();
+
+                    SqlCommand cmd = new SqlCommand(sql, connection);
+                    cmd.Parameters.Add("@Taikhoan", SqlDbType.Char).Value = tk.Taikhoan;
+                    cmd.Parameters.Add("@Matkhau", SqlDbType.Char).Value = tk.Matkhau;
+                    cmd.ExecuteNonQuery();
+
+                    connection.Close();
+                }
+                catch
+                {
+                    return false;
+                }
+                return true;
+            }
+        }
+
+        #endregion
+
         #region FormQLKN
 
         public DataTable GetAllKN()
