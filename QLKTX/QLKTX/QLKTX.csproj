@@ -90,6 +90,12 @@
     <Compile Include="frmQLSV.Designer.cs">
       <DependentUpon>frmQLSV.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmQLTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLTK.Designer.cs">
+      <DependentUpon>frmQLTK.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmQLTT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmQLSV.resx">
       <DependentUpon>frmQLSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQLTK.resx">
+      <DependentUpon>frmQLTK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmQLTT.resx">
       <DependentUpon>frmQLTT.cs</DependentUpon>

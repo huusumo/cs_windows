@@ -102,9 +102,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(13, 104);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(114, 16);
+            this.label6.Size = new System.Drawing.Size(124, 16);
             this.label6.TabIndex = 6;
-            this.label6.Text = "Tiền điện nước:";
+            this.label6.Text = "Tổng tiền phòng:";
             // 
             // tbxMaPhong
             // 
@@ -133,7 +133,7 @@
             this.tbxChiTiet.Location = new System.Drawing.Point(16, 149);
             this.tbxChiTiet.Multiline = true;
             this.tbxChiTiet.Name = "tbxChiTiet";
-            this.tbxChiTiet.Size = new System.Drawing.Size(297, 73);
+            this.tbxChiTiet.Size = new System.Drawing.Size(297, 108);
             this.tbxChiTiet.TabIndex = 4;
             // 
             // dgvP
@@ -245,7 +245,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(603, 462);
+            this.ClientSize = new System.Drawing.Size(603, 459);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnXuat);
             this.Controls.Add(this.tbxTim);

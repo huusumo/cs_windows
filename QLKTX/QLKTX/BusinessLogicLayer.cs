@@ -71,9 +71,14 @@ namespace QLKTX
             return DAL.XoaAllKN();
         }
 
+        public DataTable TimPhongtheoKN(string key)
+        {
+            return DAL.TimPhongtheoKN(key);
+        }
+
         #endregion
 
-        #region FormPhong
+        #region FormQLP
 
         public DataTable GetAllPhong()
         {
@@ -109,6 +114,17 @@ namespace QLKTX
         public DataTable GetAllMaKN()
         {
             return DAL.GetAllMaKN();
+        }
+
+        //
+        public DataTable GetAllTenSV()
+        {
+            return DAL.GetAllTenSV();
+        }
+
+        public DataTable TimSVtheoP(string key)
+        {
+            return DAL.TimSVtheoP(key);
         }
 
         #endregion
@@ -149,6 +165,12 @@ namespace QLKTX
         public DataTable GetAllMaPhong()
         {
             return DAL.GetAllMaPhong();
+        }
+
+        //
+        public DataTable GetAllSVno()
+        {
+            return DAL.GetAllSVno();
         }
 
         #endregion       

@@ -20,9 +20,15 @@ namespace QLKTX
 
             BLL = new BusinessLogicLayer();
 
-            DataTable adapter = BLL.GetAllMaKN();
-            for (int i = 0; i < adapter.Rows.Count; i++)
-                cbxMaKN.Items.Add(adapter.Rows[i].ItemArray[0]);
+            //
+            DataTable adapter1 = BLL.GetAllMaKN();
+            for (int i = 0; i < adapter1.Rows.Count; i++)
+                cbxMaKN.Items.Add(adapter1.Rows[i].ItemArray[0]);
+
+            //
+            DataTable adapter2 = BLL.GetAllTenSV();
+            for (int i = 0; i < adapter2.Rows.Count; i++)
+                cbxTruongPhong.Items.Add(adapter2.Rows[i].ItemArray[0]);
         }
 
         void ShowAllPhong()

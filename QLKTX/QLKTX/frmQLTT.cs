@@ -40,9 +40,9 @@ namespace QLKTX
 
         private void btnQuaylai_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmQLKTX QLKTX = new frmQLKTX();
-            QLKTX.Show();
+            this.Close();
+            //frmQLKTX QLKTX = new frmQLKTX();
+            //QLKTX.Show();
         }
     }
 }

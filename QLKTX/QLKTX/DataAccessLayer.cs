@@ -107,7 +107,7 @@ namespace QLKTX
 
         public bool ThemKN(KhuNha kn)
         {
-            string sql = "insert into KhuNha values(@MaKN, @SoTang, @SoPhong, @ViTri, @TinhXay, @TruongKN, @TienDienNuoc)";
+            string sql = "insert into KhuNha values(@MaKN, @SoTang, @SoPhong, @ViTri, @TinhXay, @TruongKN)";
             using (SqlConnection connection = new SqlConnection(DataConnection.ConnectDatabase))
             {
                 try
@@ -121,7 +121,6 @@ namespace QLKTX
                     cmd.Parameters.Add("@ViTri", SqlDbType.NVarChar).Value = kn.ViTri;
                     cmd.Parameters.Add("@TinhXay", SqlDbType.NVarChar).Value = kn.TinhXay;
                     cmd.Parameters.Add("@TruongKN", SqlDbType.NVarChar).Value = kn.TruongKN;
-                    cmd.Parameters.Add("@TienDienNuoc", SqlDbType.Float).Value = kn.TienDienNuoc;
                     cmd.ExecuteNonQuery();
 
                     connection.Close();
@@ -224,9 +223,27 @@ namespace QLKTX
             }
         }
 
+        // tim phong theo khu nha
+        public DataTable TimPhongtheoKN(string key)
+        {
+            DataTable datable = new DataTable();
+
+            string sql = "select * from Phong where MaKN like '%" + key + "%'";
+            using (SqlConnection connection = new SqlConnection(DataConnection.ConnectDatabase))
+            {
+                connection.Open();
+
+                SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
+                adapter.Fill(datable);
+
+                connection.Close();
+            }
+            return datable;
+        }
+
         #endregion
 
-        #region FormPhong
+        #region FormQLP
 
         public DataTable GetAllPhong()
         {
@@ -247,7 +264,7 @@ namespace QLKTX
 
         public bool ThemPhong(Phong phg)
         {
-            string sql = "insert into Phong values(@MaPhong, @MaKN, @TruongPhong, @TienDienNuoc, @ChiTiet)";
+            string sql = "insert into Phong values(@MaPhong, @MaKN, @TruongPhong, @TongTienPhong, @ChiTiet)";
             using (SqlConnection connection = new SqlConnection(DataConnection.ConnectDatabase))
             {
                 try
@@ -258,7 +275,7 @@ namespace QLKTX
                     cmd.Parameters.Add("@MaPhong", SqlDbType.NChar).Value = phg.MaPhong;
                     cmd.Parameters.Add("@MaKN", SqlDbType.NChar).Value = phg.MaKN;
                     cmd.Parameters.Add("@TruongPhong", SqlDbType.NChar).Value = phg.TruongPhong;
-                    cmd.Parameters.Add("@TienDienNuoc", SqlDbType.Float).Value = phg.TienDienNuoc;
+                    cmd.Parameters.Add("@TongTienPhong", SqlDbType.Float).Value = phg.TienDienNuoc;
                     cmd.Parameters.Add("@ChiTiet", SqlDbType.NVarChar).Value = phg.ChiTiet;
                     cmd.ExecuteNonQuery();
 
@@ -274,7 +291,7 @@ namespace QLKTX
 
         public bool SuaPhong(Phong phg)
         {
-            string sql = "update Phong set MaKN=@MaKN, TruongPhong=@TruongPhong, TienDienNuoc=@TienDienNuoc, ChiTiet=@ChiTiet where MaPhong=@MaPhong";
+            string sql = "update Phong set MaKN=@MaKN, TruongPhong=@TruongPhong, TongTienPhong=@TongTienPhong, ChiTiet=@ChiTiet where MaPhong=@MaPhong";
             using (SqlConnection connection = new SqlConnection(DataConnection.ConnectDatabase))
             {
                 try
@@ -285,7 +302,7 @@ namespace QLKTX
                     cmd.Parameters.Add("@MaPhong", SqlDbType.NChar).Value = phg.MaPhong;
                     cmd.Parameters.Add("@MaKN", SqlDbType.NChar).Value = phg.MaKN;                    
                     cmd.Parameters.Add("@TruongPhong", SqlDbType.NVarChar).Value = phg.TruongPhong;
-                    cmd.Parameters.Add("@TienDienNuoc", SqlDbType.Float).Value = phg.TienDienNuoc;
+                    cmd.Parameters.Add("@TongTienPhong", SqlDbType.Float).Value = phg.TienDienNuoc;
                     cmd.Parameters.Add("@ChiTiet", SqlDbType.NVarChar).Value = phg.ChiTiet;
                     cmd.ExecuteNonQuery();
 
@@ -367,6 +384,42 @@ namespace QLKTX
             DataTable datable = new DataTable();
 
             string sql = "select MaKN from KhuNha";
+            using (SqlConnection connection = new SqlConnection(DataConnection.ConnectDatabase))
+            {
+                connection.Open();
+
+                SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
+                adapter.Fill(datable);
+
+                connection.Close();
+            }
+            return datable;
+        }
+
+        //
+        public DataTable GetAllTenSV()
+        {
+            DataTable datable = new DataTable();
+
+            string sql = "select HoTenSV from SinhVien";
+            using (SqlConnection connection = new SqlConnection(DataConnection.ConnectDatabase))
+            {
+                connection.Open();
+
+                SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
+                adapter.Fill(datable);
+
+                connection.Close();
+            }
+            return datable;
+        }
+
+        // tim sv theo phong
+        public DataTable TimSVtheoP(string key)
+        {
+            DataTable datable = new DataTable();
+
+            string sql = "select * from SinhVien where MaPhong like '%" + key + "%'";
             using (SqlConnection connection = new SqlConnection(DataConnection.ConnectDatabase))
             {
                 connection.Open();
@@ -543,6 +596,25 @@ namespace QLKTX
             }
             return datable;
         }
+
+        //
+        public DataTable GetAllSVno()
+        {
+            DataTable datable = new DataTable();
+
+            string sql = "select * from SinhVien where DongTien='false'";
+            using (SqlConnection connection = new SqlConnection(DataConnection.ConnectDatabase))
+            {
+                connection.Open();
+
+                SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
+                adapter.Fill(datable);
+
+                connection.Close();
+            }
+            return datable;
+        }
+
 
         #endregion      
     }

@@ -19,6 +19,11 @@ namespace QLKTX
             InitializeComponent();
 
             BLL = new BusinessLogicLayer();
+
+            // FormQLP
+            DataTable adapter = BLL.GetAllTenSV();
+            for (int i = 0; i < adapter.Rows.Count; i++)
+                tbxTruongKhuNha.Items.Add(adapter.Rows[i].ItemArray[0]);
         }
 
         private void btnQuayLai_Click(object sender, EventArgs e)
@@ -47,8 +52,7 @@ namespace QLKTX
             tbxSoPhong.Clear();
             tbxViTri.Clear();
             tbxTinhXay.Clear();
-            tbxTruongKhuNha.Clear();
-            //tbxTienDienNuoc.Clear();
+            tbxTruongKhuNha.Text = "";
         }
 
         private void dgvKN_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -63,7 +67,6 @@ namespace QLKTX
                 tbxViTri.Text = dgvKN.Rows[index].Cells[3].Value.ToString();
                 tbxTinhXay.Text = dgvKN.Rows[index].Cells[4].Value.ToString();
                 tbxTruongKhuNha.Text = dgvKN.Rows[index].Cells[5].Value.ToString();
-                //tbxTienDienNuoc.Text = dgvKN.Rows[index].Cells[6].Value.ToString();
             }
             catch { }
         }
@@ -92,7 +95,6 @@ namespace QLKTX
                 {
                     kn.SoTang = int.Parse(tbxSoTang.Text);
                     kn.SoPhong = int.Parse(tbxSoPhong.Text);
-                    kn.TienDienNuoc = double.Parse(tbxTienDienNuoc.Text);
                 }
                 catch { }
 
@@ -174,7 +176,6 @@ namespace QLKTX
                 worksheet.Cells[6, 2] = "Vị trí: " + tbxViTri.Text;
                 worksheet.Cells[7, 2] = "Tỉnh xây: " + tbxTinhXay.Text;
                 worksheet.Cells[8, 2] = "Trưởng khu nhà: " + tbxTruongKhuNha.Text;
-                worksheet.Cells[9, 2] = "Tiền điện nước: " + tbxTienDienNuoc.Text;
             }
         }
     }

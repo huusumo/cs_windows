@@ -14,6 +14,5 @@ namespace QLKTX
         public string ViTri;
         public string TinhXay;
         public string TruongKN;
-        public double TienDienNuoc;
     }
 }

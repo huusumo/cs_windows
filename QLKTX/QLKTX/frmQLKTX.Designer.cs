@@ -56,6 +56,7 @@
             this.btnQLTK.TabIndex = 1;
             this.btnQLTK.Text = "QUẢN LÍ THỐNG KÊ";
             this.btnQLTK.UseVisualStyleBackColor = true;
+            this.btnQLTK.Click += new System.EventHandler(this.btnQLTK_Click);
             // 
             // btnQuaylai
             // 

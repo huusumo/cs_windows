@@ -39,7 +39,6 @@
             this.tbxSoPhong = new System.Windows.Forms.TextBox();
             this.tbxViTri = new System.Windows.Forms.TextBox();
             this.tbxTinhXay = new System.Windows.Forms.TextBox();
-            this.tbxTruongKhuNha = new System.Windows.Forms.TextBox();
             this.dgvKN = new System.Windows.Forms.DataGridView();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnQuayLai = new System.Windows.Forms.Button();
@@ -49,10 +48,9 @@
             this.btnXoaAll = new System.Windows.Forms.Button();
             this.tbxTim = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.tbxTienDienNuoc = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.btnXuat = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
+            this.tbxTruongKhuNha = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKN)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,7 +66,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 53);
+            this.label2.Location = new System.Drawing.Point(19, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 16);
             this.label2.TabIndex = 1;
@@ -77,7 +75,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 84);
+            this.label3.Location = new System.Drawing.Point(19, 98);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 16);
             this.label3.TabIndex = 2;
@@ -86,7 +84,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 115);
+            this.label4.Location = new System.Drawing.Point(19, 138);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 16);
             this.label4.TabIndex = 3;
@@ -95,7 +93,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(19, 147);
+            this.label5.Location = new System.Drawing.Point(19, 177);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 16);
             this.label5.TabIndex = 4;
@@ -104,7 +102,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(19, 180);
+            this.label6.Location = new System.Drawing.Point(19, 212);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(118, 16);
             this.label6.TabIndex = 5;
@@ -119,38 +117,31 @@
             // 
             // tbxSoTang
             // 
-            this.tbxSoTang.Location = new System.Drawing.Point(144, 50);
+            this.tbxSoTang.Location = new System.Drawing.Point(144, 56);
             this.tbxSoTang.Name = "tbxSoTang";
             this.tbxSoTang.Size = new System.Drawing.Size(75, 22);
             this.tbxSoTang.TabIndex = 7;
             // 
             // tbxSoPhong
             // 
-            this.tbxSoPhong.Location = new System.Drawing.Point(144, 81);
+            this.tbxSoPhong.Location = new System.Drawing.Point(144, 95);
             this.tbxSoPhong.Name = "tbxSoPhong";
             this.tbxSoPhong.Size = new System.Drawing.Size(75, 22);
             this.tbxSoPhong.TabIndex = 8;
             // 
             // tbxViTri
             // 
-            this.tbxViTri.Location = new System.Drawing.Point(144, 112);
+            this.tbxViTri.Location = new System.Drawing.Point(144, 135);
             this.tbxViTri.Name = "tbxViTri";
             this.tbxViTri.Size = new System.Drawing.Size(178, 22);
             this.tbxViTri.TabIndex = 9;
             // 
             // tbxTinhXay
             // 
-            this.tbxTinhXay.Location = new System.Drawing.Point(144, 144);
+            this.tbxTinhXay.Location = new System.Drawing.Point(144, 174);
             this.tbxTinhXay.Name = "tbxTinhXay";
             this.tbxTinhXay.Size = new System.Drawing.Size(178, 22);
             this.tbxTinhXay.TabIndex = 10;
-            // 
-            // tbxTruongKhuNha
-            // 
-            this.tbxTruongKhuNha.Location = new System.Drawing.Point(144, 177);
-            this.tbxTruongKhuNha.Name = "tbxTruongKhuNha";
-            this.tbxTruongKhuNha.Size = new System.Drawing.Size(178, 22);
-            this.tbxTruongKhuNha.TabIndex = 11;
             // 
             // dgvKN
             // 
@@ -238,22 +229,6 @@
             this.label7.TabIndex = 20;
             this.label7.Text = "Nhập mã khu nhà để tìm:";
             // 
-            // tbxTienDienNuoc
-            // 
-            this.tbxTienDienNuoc.Location = new System.Drawing.Point(144, 211);
-            this.tbxTienDienNuoc.Name = "tbxTienDienNuoc";
-            this.tbxTienDienNuoc.Size = new System.Drawing.Size(178, 22);
-            this.tbxTienDienNuoc.TabIndex = 22;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(19, 214);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(114, 16);
-            this.label8.TabIndex = 21;
-            this.label8.Text = "Tiền điện nước:";
-            // 
             // btnXuat
             // 
             this.btnXuat.Location = new System.Drawing.Point(482, 242);
@@ -273,15 +248,22 @@
             this.label9.TabIndex = 24;
             this.label9.Text = "Danh sách khu nhà:";
             // 
+            // tbxTruongKhuNha
+            // 
+            this.tbxTruongKhuNha.FormattingEnabled = true;
+            this.tbxTruongKhuNha.Location = new System.Drawing.Point(144, 209);
+            this.tbxTruongKhuNha.Name = "tbxTruongKhuNha";
+            this.tbxTruongKhuNha.Size = new System.Drawing.Size(178, 24);
+            this.tbxTruongKhuNha.TabIndex = 25;
+            // 
             // frmQLKN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(606, 480);
+            this.Controls.Add(this.tbxTruongKhuNha);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btnXuat);
-            this.Controls.Add(this.tbxTienDienNuoc);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.tbxTim);
             this.Controls.Add(this.btnXoaAll);
@@ -291,7 +273,6 @@
             this.Controls.Add(this.btnQuayLai);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.dgvKN);
-            this.Controls.Add(this.tbxTruongKhuNha);
             this.Controls.Add(this.tbxTinhXay);
             this.Controls.Add(this.tbxViTri);
             this.Controls.Add(this.tbxSoPhong);
@@ -328,7 +309,6 @@
         private System.Windows.Forms.TextBox tbxSoPhong;
         private System.Windows.Forms.TextBox tbxViTri;
         private System.Windows.Forms.TextBox tbxTinhXay;
-        private System.Windows.Forms.TextBox tbxTruongKhuNha;
         private System.Windows.Forms.DataGridView dgvKN;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnQuayLai;
@@ -338,9 +318,8 @@
         private System.Windows.Forms.Button btnXoaAll;
         private System.Windows.Forms.TextBox tbxTim;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox tbxTienDienNuoc;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnXuat;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox tbxTruongKhuNha;
     }
 }

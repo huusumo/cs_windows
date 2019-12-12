@@ -104,9 +104,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(21, 161);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 16);
+            this.label5.Size = new System.Drawing.Size(81, 16);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Trạng thái:";
+            this.label5.Text = "Tình trạng:";
             // 
             // label6
             // 
@@ -160,10 +160,18 @@
             // 
             // cbxMienGiam
             // 
+            this.cbxMienGiam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxMienGiam.FormattingEnabled = true;
+            this.cbxMienGiam.Items.AddRange(new object[] {
+            "Không",
+            "Sinh viên nghèo",
+            "Ban chấp hành Đoàn",
+            "Ban đại diện tỉnh",
+            "Ban quản trị Hội đồng hương",
+            "Sinh viên diện chính sách"});
             this.cbxMienGiam.Location = new System.Drawing.Point(151, 187);
             this.cbxMienGiam.Name = "cbxMienGiam";
-            this.cbxMienGiam.Size = new System.Drawing.Size(118, 24);
+            this.cbxMienGiam.Size = new System.Drawing.Size(233, 24);
             this.cbxMienGiam.TabIndex = 13;
             // 
             // dtpNgayVao

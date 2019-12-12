@@ -19,9 +19,15 @@ namespace QLKTX
 
         private void btnQLTT_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             frmQLTT QLTT = new frmQLTT();
             QLTT.Show();
+        }
+
+        private void btnQLTK_Click(object sender, EventArgs e)
+        {
+            frmQLTK QLTK = new frmQLTK();
+            QLTK.Show();
         }
 
         private void btnQuaylai_Click(object sender, EventArgs e)
@@ -33,7 +39,11 @@ namespace QLKTX
 
         private void frmQLKTX_Load(object sender, EventArgs e)
         {
-            lblTK.Text = "Tài khoản: " + this.Tag.ToString();
+            try
+            {
+                lblTK.Text = "Tài khoản: " + this.Tag.ToString();
+            }
+            catch { }
         }
 
         private void btnDoiMatKhau_Click(object sender, EventArgs e)
@@ -47,6 +57,6 @@ namespace QLKTX
         {
             frmThemTK ThemTK = new frmThemTK();
             ThemTK.Show();
-        }
+        }        
     }
 }
