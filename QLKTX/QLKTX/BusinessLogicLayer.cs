@@ -173,6 +173,30 @@ namespace QLKTX
             return DAL.GetAllSVno();
         }
 
-        #endregion       
+        public DataTable GetAllSVMoiVao()
+        {
+            return DAL.GetAllSVMoiVao();
+        }
+
+        public DataTable GetAllSVHetHan()
+        {
+            return DAL.GetAllSVHetHan();
+        }
+
+        #endregion
+
+        #region FormQLTK
+
+        public DataTable TongTienPhong(string key)
+        {
+            return DAL.TongTienPhong(key);
+        }
+
+        public DataTable GetSVMienGiam()
+        {
+            return DAL.GetSVMienGiam();
+        }
+
+        #endregion
     }
 }

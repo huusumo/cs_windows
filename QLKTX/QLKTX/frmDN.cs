@@ -50,18 +50,26 @@ namespace QLKTX
                 tk.Taikhoan = tbxTK.Text;
                 tk.Matkhau = tbxMK.Text;
 
-                if (BLL.CheckTK(tk))
+                try
                 {
-                    this.Hide();
-                    frmQLKTX QLKTX = new frmQLKTX();
-                    QLKTX.Tag = tbxTK.Text;
-                    QLKTX.Show();                   
+                    if (BLL.CheckTK(tk))
+                    {
+                        this.Hide();
+                        frmQLKTX QLKTX = new frmQLKTX();
+                        QLKTX.Tag = tbxTK.Text;
+                        QLKTX.Show();
+                    }
+                    else
+                    {
+                        lblTK.Visible = false;
+                        lblMK.Visible = false;
+                        lblSai.Visible = true;
+                    }
                 }
-                else
+                catch
                 {
-                    lblTK.Visible = false;
-                    lblMK.Visible = false;
-                    lblSai.Visible = true;
+                    frmHDcsdl hd = new frmHDcsdl();
+                    hd.Show();
                 }
             }
         }

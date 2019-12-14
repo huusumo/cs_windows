@@ -77,7 +77,7 @@ namespace QLKTX
             dtpNgaySinh.Text = "";
             chbxNam.Checked = false;
             chbxNu.Checked = false;
-            tbxTrangThai.Clear();
+            tbxTrangThai.Text = "";
             cbxMienGiam.Text = "";
             dtpNgayVao.Text = "";
             chbxDadongtien.Checked = false;

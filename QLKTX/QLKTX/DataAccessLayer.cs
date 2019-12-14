@@ -615,7 +615,80 @@ namespace QLKTX
             return datable;
         }
 
+        public DataTable GetAllSVMoiVao()
+        {
+            DataTable datable = new DataTable();
 
-        #endregion      
+            string sql = "select * from SinhVien where TrangThai like N'Mới vào'";
+            using (SqlConnection connection = new SqlConnection(DataConnection.ConnectDatabase))
+            {
+                connection.Open();
+
+                SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
+                adapter.Fill(datable);
+
+                connection.Close();
+            }
+            return datable;
+        }
+
+        public DataTable GetAllSVHetHan()
+        {
+            DataTable datable = new DataTable();
+
+            string sql = "select * from SinhVien where TrangThai like N'Đã hết hạn'";
+            using (SqlConnection connection = new SqlConnection(DataConnection.ConnectDatabase))
+            {
+                connection.Open();
+
+                SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
+                adapter.Fill(datable);
+
+                connection.Close();
+            }
+            return datable;
+        }
+
+        #endregion
+
+        #region FormQLTK
+
+        public DataTable TongTienPhong(string key)
+        {
+            DataTable datable = new DataTable();
+
+            string sql = "select sum(TongTienPhong) from Phong where MaKN like '" + key + "'";
+            using (SqlConnection connection = new SqlConnection(DataConnection.ConnectDatabase))
+            {
+                connection.Open();
+
+                SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
+                adapter.Fill(datable);
+
+                connection.Close();
+            }
+
+            return datable;
+        }
+
+        public DataTable GetSVMienGiam()
+        {
+            DataTable datable = new DataTable();
+
+            string sql = "select * from SinhVien where MienGiam not like 'Không'";
+            using (SqlConnection connection = new SqlConnection(DataConnection.ConnectDatabase))
+            {
+                connection.Open();
+
+                SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
+                adapter.Fill(datable);
+
+                connection.Close();
+            }
+
+            return datable;
+        }
+
+        #endregion
     }
 }

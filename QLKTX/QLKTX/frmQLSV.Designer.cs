@@ -38,7 +38,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.tbxMaSV = new System.Windows.Forms.TextBox();
-            this.tbxTrangThai = new System.Windows.Forms.TextBox();
             this.cbxMienGiam = new System.Windows.Forms.ComboBox();
             this.dtpNgayVao = new System.Windows.Forms.DateTimePicker();
             this.tbxChucVu = new System.Windows.Forms.TextBox();
@@ -60,6 +59,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.cbxMaP = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.tbxTrangThai = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -150,13 +150,6 @@
             this.tbxMaSV.Name = "tbxMaSV";
             this.tbxMaSV.Size = new System.Drawing.Size(233, 22);
             this.tbxMaSV.TabIndex = 9;
-            // 
-            // tbxTrangThai
-            // 
-            this.tbxTrangThai.Location = new System.Drawing.Point(151, 158);
-            this.tbxTrangThai.Name = "tbxTrangThai";
-            this.tbxTrangThai.Size = new System.Drawing.Size(233, 22);
-            this.tbxTrangThai.TabIndex = 12;
             // 
             // cbxMienGiam
             // 
@@ -354,11 +347,25 @@
             this.label12.TabIndex = 34;
             this.label12.Text = "Danh sách sinh viên:";
             // 
+            // tbxTrangThai
+            // 
+            this.tbxTrangThai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tbxTrangThai.FormattingEnabled = true;
+            this.tbxTrangThai.Items.AddRange(new object[] {
+            "Mới vào",
+            "Đang ở",
+            "Đã hết hạn"});
+            this.tbxTrangThai.Location = new System.Drawing.Point(151, 158);
+            this.tbxTrangThai.Name = "tbxTrangThai";
+            this.tbxTrangThai.Size = new System.Drawing.Size(233, 24);
+            this.tbxTrangThai.TabIndex = 35;
+            // 
             // frmQLSV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 542);
+            this.Controls.Add(this.tbxTrangThai);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.cbxMaP);
             this.Controls.Add(this.label11);
@@ -380,7 +387,6 @@
             this.Controls.Add(this.tbxChucVu);
             this.Controls.Add(this.dtpNgayVao);
             this.Controls.Add(this.cbxMienGiam);
-            this.Controls.Add(this.tbxTrangThai);
             this.Controls.Add(this.tbxMaSV);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -415,7 +421,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox tbxMaSV;
-        private System.Windows.Forms.TextBox tbxTrangThai;
         private System.Windows.Forms.ComboBox cbxMienGiam;
         private System.Windows.Forms.DateTimePicker dtpNgayVao;
         private System.Windows.Forms.TextBox tbxChucVu;
@@ -437,5 +442,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cbxMaP;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox tbxTrangThai;
     }
 }

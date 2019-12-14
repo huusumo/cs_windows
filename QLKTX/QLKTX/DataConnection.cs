@@ -8,6 +8,6 @@ namespace QLKTX
 {
     class DataConnection
     {
-        public static string ConnectDatabase = @"Data Source=LNH\SQLEXPRESS;Initial Catalog=QLKTX;Integrated Security=True";
+        public static string ConnectDatabase = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLKTX;Integrated Security=True";
     }
 }
